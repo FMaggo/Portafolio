@@ -1,0 +1,1105 @@
+.pag1 {
+  padding: 2px 0 ; 
+  background-image: none; 
+  background-color: rgba(red, green, blue, .5);
+  background-color: #ffffff;
+  
+}
+
+.contenedor {
+  background-image: url('../images/Futbol-Topos-FC.png');
+  background-size: cover; /* para cubrir todo el área */
+  background-position: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height:100vh;
+  color: #ffffff;
+  position: relative; /* Para posicionar el contenido sobre la imagen */
+  background-repeat: no-repeat;
+  isolation: isolate; /*superposicion de los elementos, en este caso, con este mandamos hasta abajo la imagen*/
+  padding: 20px;
+  
+  
+}
+
+
+.contenedor::after {
+  content:"" ;
+  position: absolute;
+  inset: 0;
+  z-index:-1;/*Posicion de los onjetos*/
+  background:black ; /*Solo modifica el background sin tocar lo demas*/
+  opacity: .5;
+
+}
+
+
+
+
+
+
+
+
+/* TITULOS DE LA PORTADA Y EL BOTON*/
+
+#titulo{
+  font-size: 3.5vw;
+  margin-bottom: 10px;
+ 
+
+}
+
+#titulo2{
+  font-size: 1.5vw;  
+  margin-top:10px;
+  
+
+}
+.button{
+  padding: 10px 20px; /* Relleno interno */
+  font-size: 1.3vw; /* Tamaño de fuente */
+  border: none; 
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor al pasar el ratón */
+  width: 14vw; 
+  height: 7vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top:50px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*Fin de la portada de plano*/
+/*Finaliza la portada incial. */
+
+/*Inicio de la barra de navegación*/
+.nav-bar {
+  display: flex;
+  position: sticky;
+  padding-left: 15px;
+  background-color: black;
+}
+
+
+
+#nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 95vw;
+}
+
+#nav-list li img {
+  height: 70px;
+  width: 80px;
+}
+
+#nav-list li{
+  margin-right: 50px;
+}
+
+.izquierda{
+  display: flex;
+  align-items: center;
+}
+.boton_nav{
+  padding: 8px 20px;
+  font-size: 1.0em;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  background-color:  white;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.boton_nav:hover{
+  background-color: rgba(225, 211, 211, 0.748);
+}
+
+#nav-list li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#nav-list li > a:hover{
+  text-decoration: underline;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/*proximos partidos*/
+
+.fixtures {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no hay espacio */
+  justify-content: space-around; /* Distribuye el espacio uniformemente alrededor de los elementos */
+  gap: 10px; /* Espacio entre los elementos */
+  padding-bottom: 15px;
+}
+.fixture {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #101010;
+  background-color: #200705a0;
+  border-radius:8px ;
+  color: white;
+
+  
+}
+.team-logo {
+  width: 50px; /* Ajusta esto según el tamaño de tus logos */
+  height: 50px;
+  background-color: #ccc; /* Color de fondo temporal */
+  border-radius: 50%;
+}
+.vs {
+  margin: 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.details {
+  text-align: center;
+}
+
+.proximos{
+  background-color: rgb(226, 214, 214);
+}
+
+/*Fin de la barra de navegacion*/
+
+
+
+/*Proximos partidos*/
+
+select,
+textarea {
+	font: inherit;
+}
+
+
+img {
+	display: block;
+	
+}
+
+strong {
+	font-weight: 600;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	line-height: 1.5;
+
+}
+
+
+.match {
+
+  display: flex;
+	flex-direction: row;
+	justify-content: center; /* Centra los elementos en el eje principal */
+	align-items: center; /* Centra los elementos en el eje transversal */
+	border-radius: 10px;
+	min-width: 100px; /* Ancho mínimo antes de que el elemento se envuelva */
+	max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+	box-shadow: 0 0 2px 0 rgba(48, 48, 48, 0.1), 0 4px 4px 0 rgba(48, 48, 48, 0.1);
+	overflow: hidden; /* Evita que los elementos internos sobresalgan del borde redondeado */
+ 
+  margin-left: 50px;
+	
+}
+
+.match-header {
+	display: flex;
+	padding: 16px;
+	border-bottom: 2px solid rgba(#303030, 0.1);
+}
+
+
+
+.match-content {
+	display: flex;
+	position: relative;
+  
+}
+
+.column {
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100%/3);  
+}
+
+.team-logo {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--color-bg-primary);
+	box-shadow: 0 4px 4px 0 rgba(#303030, 0.15),
+		0 0 0 15px var(--color-bg-secondary);
+	img {
+		width: 50px;
+	}
+
+}
+
+.team-name {
+	text-align:center;
+	margin-top: 24px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.match-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.match-date {
+	font-size: 14px;
+	color: var(--color-text-secondary);
+	strong {
+		color: var (--color-text-primary);
+	}
+}
+
+.match-score {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.match-score-number {
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 1;
+	&--leading {
+		color: var(--color-theme-primary);
+	}
+}
+
+.esta{
+  background-color: whitesmoke;
+}
+
+.resultados{
+  background-color: whitesmoke;
+}
+.match-score-divider {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+	color: var (--color-text-icon);
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+
+
+.container {
+	position: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex; 
+   
+  
+
+}
+
+
+
+/*Titulo en cuadro blanco*/
+#tit{
+  text-align: center;
+  background-color:#200705a0;
+  padding: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 1px  0px 0px black,
+             0px  1px 0px black,
+            -1px  0px 0px black,
+             0px -1px 0px black;
+  
+}
+
+/*Continua el titulo */
+
+
+/*Trajetas que se desplazan*/
+.cards-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center; /* Centrar tarjetas */
+grid-gap: 80px;
+padding-bottom: 60px;
+
+}
+
+
+.flip-card {
+  width: 17vw;
+  height: 30vh;
+  perspective: 2000px;
+  margin: 25px; 
+}
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+border-radius: 28px;
+transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+transform-style: preserve-3d;
+}
+.flip-card-front, .flip-card-back1 {
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 28px;
+backface-visibility: hidden;
+}
+.flip-card-front {
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.flip-card-back1 {
+  font-size: .9rem;
+text-align: center;
+display: grid;
+place-items: center;
+padding: 32px;
+background-color: #8a4932a9;
+transform: rotateY(180deg);
+}
+
+.flip-card-back1 h1 {
+
+  font-size: 1.7rem ;
+
+}
+
+
+.flip-card-back2 h1 {
+
+  font-size: 1.7rem ;
+
+}
+
+.flip-card-back3 h1 {
+
+  font-size: 1.7rem ;
+
+}
+.flip-card:hover .flip-card-inner {
+transform: rotateY(-180deg);
+}
+
+.flip-card-back2 {
+font-size: .9rem;
+text-align: center;
+display: grid;
+place-items: center;
+padding: 32px;
+background-color: #8a493257;
+transform: rotateY(180deg);
+
+}
+.flip-card-back3 {
+  font-size: .9rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  background-color: yellow;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  backface-visibility: hidden;
+}
+
+.flip-card-front, .flip-card-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  backface-visibility: hidden;
+}
+
+.Reservas{
+color: #1e2726;
+width: 100%;
+height: 65vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 32px 0;
+background-color: rgb(226, 214, 214);
+
+}
+
+/* Titulo de las tarjetas*/
+#insana{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 50px;
+  font-size: 50px;
+  
+}
+
+#insana4{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 10px;
+  font-size: 40px;
+  
+}
+
+
+.botones{
+  background-color: white;
+  border-radius: 8px;
+  width: 60%;
+  border-color: #1e2726;
+  text-decoration: none;
+  color: #0a141d;
+}
+
+.botones:hover{
+  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-color: #535353;
+}
+
+#insana2{
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+padding: 50px;
+font-size: 50px;
+padding-bottom: 0px;
+
+}
+
+#multi{
+
+  display: grid;
+  place-items: center;    /* Centra horizontalmente y verticalmente */
+  height: 10vh;          /* Altura de la ventana del navegador */
+}
+
+
+
+
+/* Galeria de imagenes. */
+
+.cancha{
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgb(226, 214, 214);
+width: 100%;
+min-height: 100vh;
+}
+
+
+
+.wrapper{
+width: 80%;
+padding: 30px 0 ; /*posocion de las imagenes*/
+text-align: center;
+
+}
+
+.section-header{
+text-transform: uppercase;
+padding-bottom: 30px;   /* Titulo de la sección*/
+font-size: 55px;
+color: #1e2726;
+letter-spacing: 3px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.content{
+padding: 10%;
+}
+.content h2{
+font-size: 30px;
+text-transform: uppercase;
+margin-bottom: 15px;
+}
+
+.content p{
+line-height: 1.5;
+}
+
+.main-container{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+.main-container .box{
+position: relative;
+cursor: pointer;
+margin-bottom: 15px;
+box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+height: 250px;
+overflow: hidden;
+}
+
+.main-container .box::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 5px;
+height: 100%;
+transition: all 0.5s ease-in-out;
+}
+
+.main-container .box::hover::before{
+top: 0;
+right: calc(100% - 5px);
+z-index: 8;
+}
+
+.main-container .box img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.main-container .box .img-text{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(255, 255, 255, 0.8);
+width: 100%;
+height: 100%;
+top: 0;
+right: 100%;
+transition: all 0.5s ease-in-out;
+}
+
+.main-container .box:hover .img-text{
+top: 0;
+right: 0;
+}
+
+
+
+/*Pie de pagina*/
+
+.pie-pagina{
+width: 100%;
+background-color: #0a141d;
+
+}
+
+.pie-pagina .grupo1{
+width: 100%;
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+padding: 50px 0px;
+}
+
+.pie-pagina .grupo1 .box-footer figure{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pie-pagina .grupo1 .box-footer figure img{
+width: 150px;
+}
+
+.pie-pagina .grupo1 .box-footer h2{
+color: #ffffff;
+margin-bottom: 25px;
+font-size: 20px;
+
+ 
+}
+
+.pie-pagina .grupo1 .box-footer p{
+color: #efefef;
+margin-bottom: 10px;
+
+}
+
+.pie-pagina .grupo1 .red-social a{
+display: inline-block;
+text-decoration: none;
+width: 45px;
+height: 45px;
+line-height: 45px;
+color: #ffffff;
+margin-right: 10px;
+background-color: #0a141d;
+text-align: center;
+transition: all 300ms ease;
+}
+
+.pie-pagina .grupo1 .red-social a:hover{
+color: aqua;
+}
+
+.pie-pagina .grupo2{
+background-color: #0a141d;
+text-align: center;
+padding: 15px 10px;
+color: #ffffff;
+}
+
+.pie-pagina .grupo2 small{
+font-size: 15px;
+}
+
+#tablaequipo {
+width: 100%;
+
+}
+
+.boton_esta{
+padding: 10px 20px;
+font-size: 16px;
+background-color: green;
+border-radius: 10px;
+color: black;
+text-decoration: none;
+
+}
+
+.boton_esta:hover{
+  background-color: #333333;
+}
+
+
+
+@media (max-width: 1490px) {
+.flip-card {
+  width: 350px; /* Reducir el tamaño de las tarjetas para tabletas */
+  height: 280px;
+}
+
+.Reservas {
+  padding: 24px 0; /* Ajustar el padding para tabletas */
+}
+}
+
+
+
+/* Media queries para responsividad */
+@media (max-width: 1270px) {
+  #titulo {
+      font-size: 5vw; /* Tamaño de fuente más grande para pantallas pequeñas */
+  }
+
+  #titulo2 {
+      font-size: 3vw;
+  }
+
+  .button { 
+      font-size: 2vw;
+      width: 20vw; /* Ancho más adaptable para pantallas pequeñas */
+      height: 7vh;
+  }
+  .contenedor {
+    background-size: contain; /* Cambia a 'contain' para evitar recortes en pantallas más pequeñas */
+}
+
+#nav-list {
+  padding: 20px; /* Reducir el padding para pantallas más pequeñas */
+}
+
+#nav-list li {
+  margin-right: 10px; /* Reducir el margen entre elementos */
+}
+
+#nav-list li img {
+  height: 50px; /* Ajustar el tamaño de las imágenes */
+  width: 60px;
+}
+
+#tit {
+padding: 30px; /* Padding reducido para pantallas medianas */
+font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+
+}
+
+.cards-grid {
+gap: 15px; /* Reducir el espacio entre tarjetas */
+}
+
+.flip-card {
+    width: 17vw;
+    height: 30vh;
+}
+
+.Reservas {
+height: auto; /* Hacer que la altura sea automática para adaptarse al contenido */
+padding: 16px 0; /* Reducir el padding para dispositivos móviles */
+}
+
+#insana, #insana2 {
+padding: 30px; /* Padding reducido para pantallas medianas */
+font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+}
+
+.botones {
+width: 80%; /* Ancho más adaptable para pantallas medianas */
+}
+
+.boton_esta {
+font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+}
+
+.boton_nav {
+  font-size: 0.8em;
+  padding: 6px 16px;
+}
+
+
+.main-container .box {
+width: 45%; /* Ajustar el ancho de las cajas para pantallas medianas */
+height: 200px; /* Ajustar la altura de las cajas */
+}
+
+.main-container .box img {
+height: auto; /* Asegurar que la imagen se ajuste correctamente */
+}
+
+.pie-pagina .grupo1 {
+grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+padding: 30px 0px;
+}
+
+.pie-pagina .grupo1 .box-footer figure img {
+width: 120px; /* Imágenes más pequeñas para pantallas medianas */
+}
+
+.pie-pagina .grupo1 .box-footer h2 {
+font-size: 18px; /* Tamaño de fuente más pequeño para pantallas medianas */
+}
+
+.pie-pagina .grupo1 .box-footer p,
+.pie-pagina .grupo2 small {
+font-size: 14px; /* Tamaño de fuente más pequeño para texto en pantallas medianas */
+}
+
+.pie-pagina .grupo1 .red-social a {
+width: 35px; /* Íconos de redes sociales más pequeños */
+height: 35px;
+line-height: 35px;
+}
+
+#tablaequipo {
+font-size: 16px; /* Tamaño de fuente ajustado para tablets */
+border-collapse: collapse; /* Para asegurar que la tabla se vea bien */
+}
+
+#tablaequipo th, #tablaequipo td {
+padding: 10px; /* Espaciado interno para las celdas */
+border: 1px solid #ddd; /* Bordes para las celdas */
+}
+
+#tablaequipo th {
+background-color: #f7f7f7; /* Color de fondo para los encabezados */
+color: #333333; /* Color de texto para los encabezados */
+}
+
+#tablaequipo tr:nth-child(even) {
+background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+#tablaequipo tr:hover {
+background-color: #eaeaea; /* Color de fondo al pasar el mouse */
+}
+
+
+.boton_esta {
+font-size: 18px; /* Tamaño de fuente más grande para el botón */
+padding: 15px 30px; /* Padding más grande para el botón */
+background-color: #0a141d; /* Color de fondo para el botón */
+color: white; /* Color de texto para el botón */
+border: none; /* Sin bordes para el botón */
+border-radius: 5px; /* Bordes redondeados para el botón */
+cursor: pointer; /* Cursor tipo puntero */
+transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.boton_esta:hover {
+background-color: #45a049; /* Color de fondo al pasar el mouse */
+
+}
+
+.flip-card-back1 h1 {
+  font-size: .9rem ;
+
+}
+
+
+.flip-card-back2 h1 {
+
+  font-size: 1.2rem ;
+
+}
+
+.flip-card-back3 h1 {
+
+  font-size: 1.2rem ;
+
+}
+
+}
+
+
+  
+@media (max-width: 480px) {
+  #titulo {
+      font-size: 7vw;
+  }
+
+  #titulo2 {
+      font-size: 4vw;
+  }
+
+  .button {
+      font-size: 3vw;
+      width: 25vw; /* Ancho más adaptable para pantallas pequeñas */
+      height: 10vh;
+  }
+  .contenedor {
+    background-size: contain; /* Mantiene la imagen completa visible en pantallas muy pequeñas */
+}
+.boton_nav {
+  font-size: 0.7em;
+  padding: 4px 12px;
+}
+#nav-list {
+  
+  padding: 2px;
+}
+
+#nav-list li {
+  margin-right: 8px; /* Eliminar el margen lateral */
+ 
+  
+}
+
+#nav-list li img {
+  height: 40px; /* Ajustar aún más el tamaño de las imágenes */
+  width: 50px;
+}
+
+#tit {
+
+font-size: 7vw; /* Tamaño de fuente más grande para mejorar la legibilidad en pantallas pequeñas */
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.flip-card {
+width: 100%; /* Hacer que las tarjetas ocupen todo el ancho disponible */
+height: auto; /* Ajustar la altura automáticamente */
+margin: 5px; /* Reducir el margen */
+}
+
+.flip-card-inner {
+border-radius: 14px; /* Reducir el radio del borde para tarjetas más pequeñas */
+} 
+
+
+#insana, #insana2 {
+padding: 20px; /* Padding aún más reducido para pantallas pequeñas */
+font-size: 7vw; /* Tamaño de fuente más grande para mejorar la legibilidad en pantallas pequeñas */
+}
+
+.botones {
+width: 95%; /* Ancho casi completo para pantallas pequeñas */
+}
+
+.boton_esta {
+font-size: 4vw; /* Tamaño de fuente más grande para botones en pantallas pequeñas */
+}
+
+
+.main-container .box {
+width: 90%; /* Ajustar el ancho de las cajas para pantallas pequeñas */
+height: auto; /* Ajustar la altura de las cajas */
+margin-bottom: 10px; /* Reducir el margen inferior */
+}
+
+.main-container .box img {
+height: auto; /* Asegurar que la imagen se ajuste correctamente */
+}
+
+.section-header {
+font-size: 6vw; /* Aumentar el tamaño de fuente para mejorar la legibilidad */
+}
+
+.wrapper {
+width: 95%; /* Aumentar el ancho para pantallas pequeñas */
+}
+
+.content h2 {
+font-size: 5vw; /* Aumentar el tamaño de fuente para los títulos */
+}
+
+.content p {
+font-size: 4vw; /* Aumentar el tamaño de fuente para los párrafos */
+}
+
+.pie-pagina .grupo1 {
+grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+padding: 20px 0px;
+}
+
+.pie-pagina .grupo1 .box-footer figure img {
+width: 100px; /* Imágenes más pequeñas para pantallas pequeñas */
+}
+
+.pie-pagina .grupo1 .box-footer h2 {
+font-size: 16px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+}
+
+.pie-pagina .grupo1 .box-footer p,
+.pie-pagina .grupo2 small {
+font-size: 12px; /* Tamaño de fuente más pequeño para texto en pantallas pequeñas */
+}
+
+.pie-pagina .grupo1 .red-social a {
+width: 30px; /* Íconos de redes sociales más pequeños */
+height: 30px;
+line-height: 30px;
+
+}
+#tablaequipo {
+font-size: 14px; /* Tamaño de fuente más pequeño para la tabla */
+}
+
+#tablaequipo th, #tablaequipo td {
+padding: 5px; /* Padding más pequeño para las celdas */
+}
+
+/* Ocultar columnas menos importantes en móviles */
+#tablaequipo th:nth-child(7), #tablaequipo td:nth-child(7),
+#tablaequipo th:nth-child(8), #tablaequipo td:nth-child(8),
+#tablaequipo th:nth-child(9), #tablaequipo td:nth-child(9) {
+display: none;
+}
+
+.boton_esta {
+font-size: 16px; /* Tamaño de fuente más grande para el botón */
+padding: 12px 24px; /* Padding más grande para el botón */
+}
+}
+
+@media (min-width: 651px) and (max-width: 1050px) {
+.flip-card-back1, .flip-card-back2, .flip-card-back3 {
+  font-size: 1rem; /* Ajusta el tamaño del texto para este rango */
+  /* Otros ajustes de estilo si son necesarios */
+  .boton_nav {
+    font-size: 0.9em;
+    padding: 7px 18px;
+  }
+}
+
+}
+
+@media (min-width: 1094px) and (max-width: 1269px) {
+  .cards-grid {
+    gap: 15px; /* Reducir el espacio entre tarjetas */
+  }
+
+  .izquierda a{
+    padding: 10px;
+  }
+
+  .flip-card {
+    width: 17vw;
+    height: 30vh;
+  }
+
+  .Reservas {
+    height: auto; /* Hacer que la altura sea automática para adaptarse al contenido */
+    padding: 16px 0; /* Reducir el padding para dispositivos móviles */
+  }
+  .boton_nav {
+    .boton_nav {
+      font-size: 1.8vw; /* Ajusta el tamaño de la fuente */
+      width: 3vw; /* Ajusta el ancho del botón */
+    
+  }
+}
+.flip-card-back1 h1 {
+  font-size: 1.2rem ;
+  
+
+}
+
+.flip-card-back1 {
+  font-size: .8rem;
+}
+
+
+
+.flip-card-back2 h1 {
+
+  font-size: 1.2rem ;
+
+}
+
+
+.flip-card-back2 {
+  font-size: .8rem;
+}
+
+.flip-card-back3 h1 {
+
+  font-size: 1.2rem ;
+
+}
+
+
+.flip-card-back3 {
+  font-size: .8rem;
+}
+.Reservas{
+  
+  height: 65vh;
+
+}
+}

@@ -1,0 +1,251 @@
+.fondo{
+    background-image: url('../images/EQUIPO.png');
+    background-size: cover; /* para cubrir todo el área */
+    background-position: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height:100vh;
+    color: #ffffff;
+    position: relative; /* Para posicionar el contenido sobre la imagen */
+    background-repeat: no-repeat;
+    isolation: isolate; /*superposicion de los elementos, en este caso, con este mandamos hasta abajo la imagen*/
+    padding: 20px;
+}
+
+.fondo::after{
+content:"" ;
+  position: absolute;
+  inset: 0;
+  z-index:-1;/*Posicion de los onjetos*/
+  background:black ; /*Solo modifica el background sin tocar lo demas*/
+  opacity: .7;
+}
+
+
+.row {
+    width: 100%;
+    max-width: 600px;
+  
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+   
+    margin-top: 50px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.normaltext {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+.info {
+    font-weight: bold;
+    color: white;
+    padding-bottom: 10px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 180%;
+    padding: 10px;
+    margin-bottom: 20px;
+    outline:none;
+    background: rgba(255 255 255 / .2);
+    border:3px solid transparent;
+    letter-spacing: 1px;
+    transition:.3s;
+    color:#fff;
+    
+}
+
+.button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 60%;
+    text-align: center;
+    
+
+}
+.button:hover {
+    background-color: #45a049;
+}
+
+
+.nav-bar {
+    display: flex;
+    position: sticky;
+    padding-left: 15px;
+    background-color: black;    
+  }
+  
+  
+  
+  #nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 95vw;
+  }
+  
+  #nav-list li img {
+    height: 70px;
+    width: 80px;
+  }
+  
+  #nav-list li{
+    margin-right: 50px;
+  }
+  
+  .izquierda{
+    display: flex;
+    align-items: center;
+  }
+  .boton_nav{
+    padding: 8px 20px;
+    font-size: 1.0em;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-color:  white;
+    text-decoration: none;
+    color: black;
+    
+  }
+  
+  .boton_nav:hover{
+    background-color: #8b5e4dc7;
+  }
+  
+  #nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  #nav-list li > a:hover{
+    text-decoration: underline;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+
+
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    padding:20px;
+    gap:10px;
+    width: 1000px;
+}
+
+.box-info {
+    color:white;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    text-align: left;
+}
+
+.box-info > h1 {
+    text-align: left;
+    letter-spacing: 5px;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap:25px
+}
+
+.data > p {
+    font-size: 1rem;
+}
+
+.data > p > i {
+    color:crimson;
+    margin-right: 10px;
+    font-size:25px;
+    display: flex;
+    text-align: left;
+}
+
+
+
+.links {
+    display:flex;
+    gap:15px;
+}
+
+.links > a {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background: crimson;
+    text-align: center;
+    transition: .1s;
+}
+
+.links > a > i {
+    color:#fff;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shake { 
+    0%, 100% {transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
+    20%, 40%, 60%, 80% {transform: translateX(10px);} 
+ }
+
+
+@media screen and (max-width:600px) {
+    .container {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+
+    .box-info {
+        gap:15px;
+    }
+
+    .box-info > h1 {
+        font-size: 1.5rem;
+    }
+}
