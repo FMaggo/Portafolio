@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/cancha.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+}
+
+h2 {
+    font-family: fantasy;
+    font-size: 40px;
+    color: #193599;
+}
+
+.margin {
+    margin: 70px 0;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.success {
+    color: #008000;
+}
